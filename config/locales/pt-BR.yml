@@ -10,9 +10,14 @@ pt-BR:
       activated: 'Registro ativado com sucesso'
       deactivated: 'Registro desativado com sucesso'
       deleted: 'Registro deletado com sucesso'
-      transferred: 'Transferência efetuada com sucesso'
-      deposited: 'Depósito efetuado com sucesso'
-
+      transferred: "Transferida a quantia de %{amount} da conta Nº %{source} para conta Nº %{destination}"
+      deposited: 'Depósito de %{amount} efetuado com sucesso'
+      unprocessed_entity: 'Ocorreu um erro ao processar a informação'
+      insufficient_balance: 'Saldo insuficiente'
+      balance: "O saldo atual é de: %{value}"
+      account_not_found: "Conta Nº %{account_number} não foi encontrada"
+  withdraw: 'Saque'
+  deposit: 'Depósito'
   activerecord:
     errors:
       messages:
