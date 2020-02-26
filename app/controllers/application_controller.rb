@@ -1,17 +1,19 @@
 class ApplicationController < ActionController::API
 
-  def authorize_request
-    header = request.headers['Authorization']
-    header = header.split(' ').last if header # || header.match(/\ABearer\s+(.+)\z/)[1]
+  rescue_from Account::InsufficientFunds, with: nil do
+    respond_with_failure(I18n.t('respond.with.insufficient_balance'), 422)
+  end
 
-    begin
-      @decoded = JsonWebToken.decode(header)
-      @current_user = User.find(@decoded[:user_id])
-    rescue JWT::DecodeError
-      respond_with_failure('respond.with.unauthorized', 401)
-    rescue ActiveRecord::RecordNotFound
-      respond_with_failure('respond.with.not_found', 401)
-    end
+  rescue_from Account::NotFound, with: nil do |error|
+    respond_with_failure(error.message, 404)
+  end
+
+  rescue_from ActiveRecord::RecordNotFound, with: nil do
+    respond_with_failure(I18n.t('respond.with.not_found'), 404)
+  end
+
+  rescue_from ActiveRecord::RecordInvalid, with: nil do |exception|
+    respond_with_failure(exception.message, 422)
   end
 
   protected
@@ -19,18 +21,16 @@ class ApplicationController < ActionController::API
   def respond_with_failure(message, status)
     render json: {
       error: {
-        message: I18n.t(message),
+        message: message,
         status: status
       }
     }, status: status
   end
 
-  def respond_with_success(object, message, status)
+  def respond_with_success(message, status)
     render json: {
-      object: object,
-      message: I18n.t(message),
+      message: message,
       status: status
     }, status: status
   end
 end
-

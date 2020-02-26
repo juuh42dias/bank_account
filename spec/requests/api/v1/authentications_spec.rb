@@ -14,7 +14,7 @@ RSpec.describe 'Api::V1::Authentications', type: :request do
     context 'with invalid user' do
       it 'returns an unauthorized error' do
         post api_v1_auth_login_path, params: { email: 'vovozinha@email.com', password: '123' }
-        expect(json_response['message']).to eq('Usuário(a) não autenticado(a)')
+        expect(json_response['error']['message']).to eq('Usuário(a) não autenticado(a)')
       end
     end
   end
