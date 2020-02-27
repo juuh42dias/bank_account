@@ -23,6 +23,7 @@ module BankingAccount
     config.load_defaults 5.2
     config.time_zone = 'Brasilia'
     config.i18n.default_locale = :'pt-BR'
+    config.enable_dependency_loading = true
     config.autoload_paths << Rails.root.join('lib')
 
     # Settings in config/environments/* take precedence over those specified here.
