@@ -2,13 +2,6 @@ class Api::V1::UsersController < Api::V1::BaseController
   before_action :authorize_request, except: :create
   before_action :set_user, only: [:show, :update, :destroy]
 
-  # GET /api/v1/users
-  def index
-    @users = User.all
-
-    render json: @users
-  end
-
   # GET /api/v1/users/1
   def show
     render json: @user
