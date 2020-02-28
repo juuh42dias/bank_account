@@ -5,7 +5,7 @@ This is a simple banking account system with manage user and accounts, you can c
 
 ## Index
 * [Project dependencies](#project-dependencies)
-* [Creating the database user](#creating-database-user)
+* [Creating the database user](#creating-db-user)
 * [Project Instalation](#project-instalation)
   * [Cloning Project](#cloning-project)
   * [Setup project](#setup-project)
@@ -36,22 +36,22 @@ This is a simple banking account system with manage user and accounts, you can c
 
 ###Follow these instrunctions to install dependencies
 
-If you use MacOS:
-**Ruby**: https://github.com/rbenv/rbenv#homebrew-on-macos
-**PostgreSQL**: https://www.postgresql.org/download/macosx/
+If you use MacOS:  
+**Ruby**: https://github.com/rbenv/rbenv#homebrew-on-macos  
+**PostgreSQL**: https://www.postgresql.org/download/macosx/  
 
-If you use Ubuntu:
-**Ruby**: https://github.com/rbenv/rbenv-installer#rbenv-installer
+If you use Ubuntu:  
+**Ruby**: https://github.com/rbenv/rbenv-installer#rbenv-installer  
 **PostgreSQL**:https://www.postgresql.org/download/linux/ubuntu/
-
-## [Creating the database user](#creating-database-user)
+  
+## [Creating the database user](#creating-db-user)
 * `$ sudo -u postgres psql;`
 * `$ create role bank_account with createdb login password 'bank_account123';`
 
 
 ## [Project Instalation](#project-instalation)
 ### [Cloning project](#cloning-project)
-* `git clone git@gitlab.com:juuh42dias/banking_account.git`
+* `git clone git@github.com:juuh42dias/bank_account.git`
 
 ### [Setup project](#setup-project)
 * `bin/setup`
@@ -64,28 +64,28 @@ If you use Ubuntu:
 * Create, migrate and populate the database
 
 ### [Running tests](#running-tests)
-**Run!**
+**Run!**  
 * Run the `bundle exec rspec` to guarantee that everything is working fine.
 
 ### [Running app](#running-app)
 * If everything is ok, run `rails server`
 you can check app running on http://localhost:3000
 
-## [Usage bank](#usage-bank)
-First of all, do you follow these steps
-* Create an user: [creating user](#create-user)
-* Login user in the app: [logging user](#login-auth)
+## [Usage bank](#usage-bank)  
+First of all, do you follow these steps  
+* Create an user: [creating user](#create-user)  
+* Login user in the app: [logging user](#login-auth)  
 * Create an account: [creating an account](#create-account)
-
+  
 And be free to [deposit](#deposit-account) (deposit is not required to logged user), to check your [balance](#balance-account), [transfer](#transfer-account) your rich money or [list](#index-account) all your accounts.
-
+  
 Enjoy the app!
-
+  
 
 ## [Api documentation](#api-documentation)
 ### [User endpoint](#user-endpoint)
 #### [Create User](#create-user)
-  ```
+```
   # Create User POST [/users/]
   + Attributes (object)
     + user
@@ -121,7 +121,7 @@ Enjoy the app!
 ```
 
 #### [Update User](#update-user)
-  ```
+```
   # Update User PUT [/users/:id]
   + Attributes (object)
     + user
@@ -155,7 +155,7 @@ Enjoy the app!
 ```
 
 #### [Show User](#show-user)
-  ```
+```
   # Show User GET [/users/:id]
   + Request (application/json)
     + Headers
@@ -175,7 +175,7 @@ Enjoy the app!
 ```
 
 #### [Delete User](#delete-user)
-  ```
+```
   # Delete User DELETE [/users/:id]
   + Request (application/json)
     + Headers
@@ -185,9 +185,9 @@ Enjoy the app!
 
 ```
 
-## [Account endpoint](#account-endpoint)
-### [Index Account](#index-account)
-  ```
+### [Account endpoint](#account-endpoint)
+#### [Index Account](#index-account)
+```
   # Index Account GET [/accounts/]
   + Request (application/json)
     + Headers
@@ -212,7 +212,7 @@ Enjoy the app!
 ```
 
 #### [Create Account](#create-account)
-  ```
+```
   # Create Account POST [/accounts/]
   + Attributes (object)
     + account
@@ -239,8 +239,8 @@ Enjoy the app!
         }
 ```
 
-#### [Balance Account](#cbalance-account)
-  ```
+#### [Balance Account](#balance-account)
+```
   # Balance Account GET [/accounts/:account_id/balance]
   + Request (application/json)
     + Headers
@@ -254,7 +254,7 @@ Enjoy the app!
       }
 ```
 #### [Deposit Account](#deposit-account)
-  ```
+```
   # Deposit Account POST [/accounts/deposit]
   + Attributes (object)
     + account
@@ -281,7 +281,7 @@ Enjoy the app!
 ```
 
 #### [Transfer Account](#transfer-account)
-  ```
+```
   # Transfer Account POST [/accounts/transfer]
   + Attributes (object)
     + account
@@ -314,9 +314,9 @@ Enjoy the app!
           "status": 200
         }
 ```
-## [Authentication Endpoint](#authentication-endpoint)
-### [Login Auth](#login-auth)
-  ```
+### [Authentication Endpoint](#authentication-endpoint)
+#### [Login Auth](#login-auth)
+```
   # Login Auth POST [/auth/login]
   + Attributes (object)
     + user
@@ -340,13 +340,14 @@ Enjoy the app!
 
 ## [Contact](#contact)
 
-Juliana Dias dos Santos e Silva – [@juuh42dias](https://twitter.com/juuh42dias) – hello@juliana.dev
+[Juliana Dias dos Santos e Silva](juliana.dev) – [@juuh42dias](https://twitter.com/juuh42dias) – <hello@juliana.dev>
 
-[https://gitlab.com/juuh42dias/(https://gitlab.com/juuh42dias)
+[https://gitlab.com/juuh42dias/](https://gitlab.com/juuh42dias)  
+[https://github.com/juuh42dias/](https://github.com/juuh42dias/)
 
 ## [Contributing](#contributing)
 
-1. Fork it (<https://gitlab.com/juuh42dias/banking_account/-/forks/new>)
+1. Fork it (<https://github.com/juuh42dias/bank_account/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
