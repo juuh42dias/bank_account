@@ -5,7 +5,7 @@ This is a simple banking account system with manage user and accounts, you can c
 
 ## Index
 * [Project dependencies](#project-dependencies)
-* [Creating the database user](#creating-db-user)
+* [Creating the database user](#creating-database-user)
 * [Project Instalation](#project-instalation)
   * [Cloning Project](#cloning-project)
   * [Setup project](#setup-project)
@@ -44,7 +44,7 @@ If you use Ubuntu:
 **Ruby**: https://github.com/rbenv/rbenv-installer#rbenv-installer  
 **PostgreSQL**:https://www.postgresql.org/download/linux/ubuntu/
   
-## [Creating the database user](#creating-db-user)
+## [Creating database user](#creating-database-user)
 * `$ sudo -u postgres psql;`
 * `$ create role bank_account with createdb login password 'bank_account123';`
 
