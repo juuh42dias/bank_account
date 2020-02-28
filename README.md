@@ -34,7 +34,7 @@ This is a simple banking account system with manage user and accounts, you can c
 * Rails 5.2.3
 * PostgreSQL
 
-###Follow these instrunctions to install dependencies
+### Follow these instrunctions to install dependencies
 
 If you use MacOS:  
 **Ruby**: https://github.com/rbenv/rbenv#homebrew-on-macos  
