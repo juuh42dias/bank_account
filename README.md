@@ -1,5 +1,7 @@
 # Banking Account - SA
 
+![rspec](https://ruby.ci/badges/9fec11b5-097d-427b-bbdf-757c2aa25902/rspec)
+
 This is a simple banking account system with manage user and accounts, you can create and account with an initial amount, deposit to an account, transfer and check balance from your accounts.
 
 
