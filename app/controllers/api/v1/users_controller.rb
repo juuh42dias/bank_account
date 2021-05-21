@@ -4,7 +4,11 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   # GET /api/v1/users/1
   def show
-    render json: @user
+    if @user == current_user
+      render json: @user
+    else
+      render json: @user.errors, status: :not_found
+    end
   end
 
   # POST /api/v1/users
