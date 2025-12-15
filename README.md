@@ -72,7 +72,7 @@ Enjoy the app!
   
 ## [Contact](#contact)
 
-[Juliana Dias](juliana.dev) – [@juuh42dias](https://ruby.social/juuh42dias) – <hello@juliana.dev>
+[Juliana Dias](juliana.dev) – [@juuh42dias](https://ruby.social/@juuh42dias) – <hello@juliana.dev>
 
 [https://gitlab.com/juuh42dias/](https://gitlab.com/juuh42dias)  
 [https://github.com/juuh42dias/](https://github.com/juuh42dias/)
